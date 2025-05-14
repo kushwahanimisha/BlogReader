@@ -10,7 +10,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 
-class BlogListViewModel(application: Application) : AndroidViewModel(application) {
+open class BlogListViewModel(application: Application) : AndroidViewModel(application) {
+
     private val repository = BlogRepository(application)
     var blogList by mutableStateOf<List<BlogPost>>(emptyList())
         private set
